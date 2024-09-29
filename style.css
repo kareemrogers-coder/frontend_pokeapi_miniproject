@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(234, 240, 214, 0.9),rgba(233, 237, 220, 0.9)), url(images/main_pg_img.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.p1 {
+    font-style: italic;
+}
