@@ -23,6 +23,8 @@ const getPokemon = async (URL, text) => {
 
         const{id, height, abilities, types, stats, name, sprites:{other:{dream_world:{front_default}}}} = data;
 
+        const secondAbility = abilities.length > 1 ? `and ${abilities[1].ability.name}` : "";
+
         loading.classList.add('d-none');
         result.className = 'result active'
         result.innerHTML = `
@@ -32,7 +34,7 @@ const getPokemon = async (URL, text) => {
         <h3 class="pokename"> Name: ${name} </h3>
         <p class ="pokenumber">ID#: ${id.toString().padStart(4,'0')}</p>
         <p class ="height"> Height: ${height} ft</p>
-        <p class ="pokeability"> Abilities: ${abilities[0].ability.name} and ${abilities[1].ability.name}</p>
+        <p class ="pokeability"> Abilities: ${abilities[0].ability.name} ${secondAbility}</p>
         <p class ="poketype"> Type: ${types[0].type.name}</p>
         <h5 class="pokestat">Stats:</h5>
         <p class ="pokestatus">${stats[0].stat.name}: ${stats[0].base_stat}</p>
